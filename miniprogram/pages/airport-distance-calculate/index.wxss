@@ -1,0 +1,5 @@
+/* pages/airport-distance-calculate/index.wxss */
+.rst-time {
+  color: red;
+  font-size: bold;
+}

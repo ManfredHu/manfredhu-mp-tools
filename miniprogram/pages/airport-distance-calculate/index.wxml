@@ -1,0 +1,50 @@
+<view class="page-body">
+  <view class="page-section">
+    <view class="weui-cells__title">航班时间</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell">
+        <picker mode="date" bindchange="onDateChange">
+          <view class="picker">选择日期：{{date}}</view>
+        </picker>
+      </view>
+      <view class="weui-cell">
+        <picker mode="time" bindchange="onTimeChange">
+          <view class="picker">选择时间：{{time}}</view>
+        </picker>
+      </view>
+    </view>
+  </view>
+  <view class="page-section">
+    <view class="weui-cells__title">出发点到机场需要的时间(min)</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input class="weui-input" type="number" placeholder="请输入" model:value="{{toAirportTime}}" />
+      </view>
+    </view>
+  </view>
+  <view class="page-section" style="margin-top: 40rpx;">
+    <button type="primary" bindtap="onCalculateTime">计算</button>
+  </view>
+
+  <view class="page-section">
+    <view class="weui-cells__title">计算得出的出发时间</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input rst-time">{{calculateTime}}</view>
+    </view>
+    <view class="weui-cells__title">计算得出的最晚登机时间</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input rst-time">{{calculateOnboardingTime}}</view>
+    </view>
+  </view>
+  <view class="page-section">
+    <view class="weui-cells__title">行李托运提示</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell">
+        20寸以上行李箱需要托运
+      </view>
+      <view class="weui-cell">
+        液体容积不超过100毫升
+      </view>
+    </view>
+  </view>
+</view>
